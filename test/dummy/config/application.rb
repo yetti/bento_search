@@ -7,6 +7,9 @@ require "bento_search"
 
 module Dummy
   class Application < Rails::Application
+    config.load_defaults 7.1
+    config.autoload_lib(ignore: %w[assets tasks])
+    config.add_autoload_paths_to_load_path = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

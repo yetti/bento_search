@@ -1,8 +1,4 @@
 require 'language_list'
-require 'bento_search/results'
-require 'bento_search/author'
-require 'bento_search/link'
-
 
 module BentoSearch
   # Data object representing a single hit from a search, normalized
