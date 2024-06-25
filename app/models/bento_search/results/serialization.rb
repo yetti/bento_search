@@ -1,4 +1,3 @@
-require 'bento_search/results'
 require 'active_support/concern'
 require 'json'
 require 'date'

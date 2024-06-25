@@ -7,6 +7,9 @@ require "bento_search"
 
 module Dummy
   class Application < Rails::Application
+    config.load_defaults 7.1
+    config.autoload_lib(ignore: %w[assets tasks])
+    config.add_autoload_paths_to_load_path = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -40,14 +43,6 @@ module Dummy
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
     # config.active_record.schema_format = :sql
-
-    # Enable the asset pipeline
-    # config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    # config.assets.version = '1.0'
-
-    config.active_record.legacy_connection_handling = false
 
     # Avoid Rails deprecation warning
     if Gem::Version.new(Rails.version).release >= Gem::Version.new("5.2.0") && Gem::Version.new(Rails.version).release < Gem::Version.new("6.0.0")

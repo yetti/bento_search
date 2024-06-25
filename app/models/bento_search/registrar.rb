@@ -1,6 +1,4 @@
-require 'bento_search'
-
-# Holds a list of registered search engines with configuration. 
+# Holds a list of registered search engines with configuration.
 # There's one global one referened by BentoSearch module, but one
 # might want to create multiple. 
 class BentoSearch::Registrar
